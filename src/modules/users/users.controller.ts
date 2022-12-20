@@ -96,7 +96,7 @@ export class UsersController{
 
 
     async delete(request: Request, response: Response){
-        return response.json({message: 'Para deletar algum dado fale com heitor'})
+        return response.json({message: 'Para deletar algum dado fale com heito'})
     }
 
     async assign(request: Request, response: Response){
