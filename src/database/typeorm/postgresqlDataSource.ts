@@ -3,11 +3,8 @@ import { DataSource } from "typeorm";
 
 export const AppDataSource = new DataSource({
     type: 'postgres',
-    host: process.env.POSTGRESQL_HOST,
     port: 5432,
-    username: process.env.POSTGRESQL_USERNAME,
-    password: process.env.POSTGRESQL_PASSWORD,
-    database: process.env.POSTGRESQL_DATABASE,
+    url: process.env.POSTGRESQL_URL,
     entities: [`${__dirname}/../../../**/modules/**/entities/*.{ts,js}`],
     migrations: [`${__dirname}/../../../**/database/typeorm/migrations/*.{ts,js}`],
 })

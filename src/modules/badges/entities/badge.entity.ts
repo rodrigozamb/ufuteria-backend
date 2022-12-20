@@ -9,6 +9,9 @@ export class Badge{
     id: string;
 
     @Column()
+    nome: string;
+
+    @Column()
     foto_url: string;
 
     @ManyToMany(() => User, (user) => user.badges, {

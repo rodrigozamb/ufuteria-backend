@@ -19,10 +19,6 @@ AppDataSource.initialize().then(()=>{
         const { id } = req.params;
         res.send(await spreadsheetService.findById(id));
     });
-
-    app.get('/teste',(req,res)=>{
-        return res.json('deu certo');
-    })
     
     return app.listen(port, async () => {
         console.log('server running...');

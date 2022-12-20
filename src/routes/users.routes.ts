@@ -7,7 +7,7 @@ const usersRoutes = Router()
 const usersController = new UsersController();
 
 usersRoutes.get('/',usersController.getAll);
-usersRoutes.get('/:id',usersController.getOne);
+usersRoutes.get('/:cpf',usersController.getOne);
 usersRoutes.post('/',usersController.create);
 usersRoutes.patch('/:id',usersController.update);
 usersRoutes.delete('/',usersController.delete);
