@@ -41,7 +41,7 @@ export class UsersController{
             
         }catch(err){
             
-            return response.status(400).json({error: err.detail})
+            return response.status(400).json({error: err.detail || err.message})
         }
     }
 
