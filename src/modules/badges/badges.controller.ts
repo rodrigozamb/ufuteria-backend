@@ -15,7 +15,7 @@ class BadgesController{
             return response.status(201).json(badge);
 
         }catch(err){
-            return response.status(400).json(err.detail)
+            return response.status(400).json({error: err.detail || err.message})
         }
     }
 
